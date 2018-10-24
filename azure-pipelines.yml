@@ -18,6 +18,7 @@ steps:
     testResultsFiles: '**/TEST-*.xml'
     goals: 'package'
 
-- task: cmdLine@2
+- task: PublishBuildArtifacts@1
   inputs:
-    script: 'cp target/ROOT.jar ./'
+    pathtoPublish: target/ROOT.jar
+    artifactName: 'drop'
