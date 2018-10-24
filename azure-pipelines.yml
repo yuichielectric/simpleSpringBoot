@@ -17,3 +17,13 @@ steps:
     publishJUnitResults: false
     testResultsFiles: '**/TEST-*.xml'
     goals: 'package'
+
+- task: cmdLine@2
+  inputs:
+    script: 'cp target/ROOT.war ./'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: target/ROOT.war
+    artifactName: 'drop'
+
