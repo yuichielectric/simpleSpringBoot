@@ -6,7 +6,7 @@
     <groupId>com.microsoft</groupId>
 	<artifactId>ROOT</artifactId>
 	<version>1.0</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>Sample Spring App</name>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -51,6 +51,9 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <executable>true</executable>
+                </configuration>
             </plugin>
             <plugin>
                 <artifactId>maven-failsafe-plugin</artifactId>
